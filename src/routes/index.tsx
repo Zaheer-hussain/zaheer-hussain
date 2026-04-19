@@ -44,17 +44,3 @@ function Index() {
     </main>
   );
 }
-
-function Index() {
-  return (
-    <main className="relative min-h-screen">
-      <Nav />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Contact />
-    </main>
-  );
-}
