@@ -22,7 +22,11 @@ export function ContactForm() {
       return;
     }
     setLoading(true);
-    const { error } = await supabase.from("contact_messages").insert(parsed.data);
+    const { error } = await supabase.rpc("submit_contact_message", {
+      p_name: parsed.data.name,
+      p_email: parsed.data.email,
+      p_message: parsed.data.message,
+    });
     setLoading(false);
     if (error) {
       toast.error("Could not send message. Try again.");
