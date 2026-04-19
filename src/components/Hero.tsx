@@ -57,10 +57,11 @@ export function Hero() {
             view_projects.sh →
           </a>
           <a
-            href="#contact"
+            href="/Zaheer_Hussain_Resume.pdf"
+            download="Zaheer_Hussain_Resume.pdf"
             className="font-mono text-sm px-6 py-3 border border-border text-foreground hover:border-neon hover:text-neon transition-all duration-300 rounded-sm"
           >
-            ./say_hello
+            ↓ resume.pdf
           </a>
         </motion.div>
       </div>
