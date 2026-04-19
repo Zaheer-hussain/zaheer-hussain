@@ -9,8 +9,24 @@ import { Contact } from "@/components/Contact";
 import { SocialSidebar } from "@/components/SocialSidebar";
 import { Toaster } from "@/components/ui/sonner";
 
+function IndexPage() {
+  return (
+    <main className="relative min-h-screen">
+      <Nav />
+      <SocialSidebar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+      <Toaster theme="dark" position="bottom-right" />
+    </main>
+  );
+}
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: IndexPage,
   head: () => ({
     meta: [
       { title: "Zaheer Hussain — DevOps · Full-Stack · Security" },
@@ -28,19 +44,3 @@ export const Route = createFileRoute("/")({
     ],
   }),
 });
-
-function Index() {
-  return (
-    <main className="relative min-h-screen">
-      <Nav />
-      <SocialSidebar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Contact />
-      <Toaster theme="dark" position="bottom-right" />
-    </main>
-  );
-}
