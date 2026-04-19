@@ -6,6 +6,8 @@ import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
 import { Contact } from "@/components/Contact";
+import { SocialSidebar } from "@/components/SocialSidebar";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -26,6 +28,22 @@ export const Route = createFileRoute("/")({
     ],
   }),
 });
+
+function Index() {
+  return (
+    <main className="relative min-h-screen">
+      <Nav />
+      <SocialSidebar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+      <Toaster theme="dark" position="bottom-right" />
+    </main>
+  );
+}
 
 function Index() {
   return (
