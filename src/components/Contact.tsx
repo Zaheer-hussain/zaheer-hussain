@@ -45,12 +45,6 @@ export function Contact() {
           >
             ✉  zaheerhussain9620@gmail.com
           </a>
-          <a
-            href="tel:+919964939469"
-            className="font-mono text-sm px-6 py-3 border border-border text-foreground hover:border-neon hover:text-neon transition-all duration-300 rounded-sm"
-          >
-            ☎  +91 99649 39469
-          </a>
         </motion.div>
 
         <motion.div
