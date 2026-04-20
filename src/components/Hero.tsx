@@ -40,8 +40,8 @@ export function Hero() {
           CS undergrad building at the intersection of{" "}
           <span className="text-neon font-mono text-sm">DevOps</span>,{" "}
           <span className="text-neon font-mono text-sm">AI/ML</span>, and{" "}
-          <span className="text-neon font-mono text-sm">Cybersecurity</span>.
-          Crafting secure, intelligent, scalable systems.
+          <span className="text-neon font-mono text-sm">Cybersecurity</span>. Crafting secure,
+          intelligent, scalable systems.
         </motion.p>
 
         <motion.div

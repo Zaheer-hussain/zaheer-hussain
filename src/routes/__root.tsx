@@ -33,14 +33,28 @@ export const Route = createRootRoute({
       { name: "description", content: "Interactive 3D portfolio — DevOps · Full-Stack · Security" },
       { name: "author", content: "Zaheer Hussain" },
       { property: "og:title", content: "Zaheer Hussain — Portfolio" },
-      { property: "og:description", content: "Interactive 3D portfolio — DevOps · Full-Stack · Security" },
+      {
+        property: "og:description",
+        content: "Interactive 3D portfolio — DevOps · Full-Stack · Security",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Zaheer Hussain — Portfolio" },
-      { name: "twitter:description", content: "Interactive 3D portfolio — DevOps · Full-Stack · Security" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/86060dc3-5a83-4b31-87dc-3d57284350e8" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/86060dc3-5a83-4b31-87dc-3d57284350e8" },
+      {
+        name: "twitter:description",
+        content: "Interactive 3D portfolio — DevOps · Full-Stack · Security",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/86060dc3-5a83-4b31-87dc-3d57284350e8",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/86060dc3-5a83-4b31-87dc-3d57284350e8",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -10,9 +10,7 @@ export function SectionHeading({ index, title }: { index: string; title: string 
       className="flex items-center gap-4 mb-12"
     >
       <span className="font-mono text-sm text-neon">{index}.</span>
-      <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
-        {title}
-      </h2>
+      <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
       <div className="flex-1 h-px bg-gradient-to-r from-neon/40 to-transparent" />
     </motion.div>
   );
