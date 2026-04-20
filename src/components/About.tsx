@@ -16,19 +16,19 @@ export function About() {
           >
             <p>
               I'm a third-year B.Tech Computer Science student at{" "}
-              <span className="text-foreground">Presidency University</span>, currently
-              holding a CGPA of <span className="text-neon font-mono">8.52/10</span>.
-              My focus lies in DevOps, with a deep curiosity for how AI/ML and
-              Cybersecurity converge to shape the next generation of intelligent systems.
+              <span className="text-foreground">Presidency University</span>, currently holding a
+              CGPA of <span className="text-neon font-mono">8.52/10</span>. My focus lies in DevOps,
+              with a deep curiosity for how AI/ML and Cybersecurity converge to shape the next
+              generation of intelligent systems.
             </p>
             <p>
-              I build full-stack web applications, tinker with embedded hardware, and
-              spend a lot of time thinking about the boundary between
-              code that ships and code that's secure, observable, and scalable.
+              I build full-stack web applications, tinker with embedded hardware, and spend a lot of
+              time thinking about the boundary between code that ships and code that's secure,
+              observable, and scalable.
             </p>
             <p>
-              When I'm not coding, you'll find me exploring new tech, contributing to
-              team projects, and constantly learning at the bleeding edge.
+              When I'm not coding, you'll find me exploring new tech, contributing to team projects,
+              and constantly learning at the bleeding edge.
             </p>
           </motion.div>
 
@@ -44,11 +44,21 @@ export function About() {
               <span>STATUS: AVAILABLE</span>
             </div>
             <div className="border-t border-border pt-3 space-y-2 text-muted-foreground">
-              <div><span className="text-neon">{">"}</span> location: Bangalore, IN</div>
-              <div><span className="text-neon">{">"}</span> degree: B.Tech CSE (DevOps)</div>
-              <div><span className="text-neon">{">"}</span> graduation: May 2027</div>
-              <div><span className="text-neon">{">"}</span> cgpa: 8.52/10</div>
-              <div><span className="text-neon">{">"}</span> focus: AI/ML × CyberSec</div>
+              <div>
+                <span className="text-neon">{">"}</span> location: Bangalore, IN
+              </div>
+              <div>
+                <span className="text-neon">{">"}</span> degree: B.Tech CSE (DevOps)
+              </div>
+              <div>
+                <span className="text-neon">{">"}</span> graduation: May 2027
+              </div>
+              <div>
+                <span className="text-neon">{">"}</span> cgpa: 8.52/10
+              </div>
+              <div>
+                <span className="text-neon">{">"}</span> focus: AI/ML × CyberSec
+              </div>
             </div>
           </motion.div>
         </div>

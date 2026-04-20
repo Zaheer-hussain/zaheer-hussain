@@ -66,9 +66,7 @@ export function Projects() {
                 <article className="group relative h-full rounded-sm border border-border bg-card/60 backdrop-blur-sm p-8 hover:border-neon/60 hover:shadow-glow transition-all duration-300 overflow-hidden">
                   <div className="absolute -top-px -right-px w-20 h-20 bg-gradient-to-bl from-neon/20 to-transparent" />
                   <div className="flex items-start justify-between mb-6">
-                    <span className="font-mono text-xs text-neon/60">
-                      project_{p.num}
-                    </span>
+                    <span className="font-mono text-xs text-neon/60">project_{p.num}</span>
                     <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground border border-border px-2 py-1 rounded-sm">
                       {p.accent}
                     </span>
@@ -76,9 +74,7 @@ export function Projects() {
                   <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 group-hover:text-neon transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    {p.blurb}
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{p.blurb}</p>
                   <ul className="flex flex-wrap gap-2">
                     {p.stack.map((s) => (
                       <li
