@@ -40,7 +40,11 @@
   --shadow-glow: 0 0 40px color-mix(in oklab, var(--neon) 35%, transparent);
   --shadow-glow-sm: 0 0 16px color-mix(in oklab, var(--neon) 40%, transparent);
 
-  --gradient-radial: radial-gradient(circle at 50% 0%, color-mix(in oklab, var(--neon) 15%, transparent), transparent 60%);
+  --gradient-radial: radial-gradient(
+    circle at 50% 0%,
+    color-mix(in oklab, var(--neon) 15%, transparent),
+    transparent 60%
+  );
   --gradient-text: linear-gradient(135deg, var(--neon) 0%, var(--neon-soft) 100%);
 }
 
@@ -101,12 +105,19 @@
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse at top, color-mix(in oklab, var(--neon) 8%, transparent), transparent 70%);
+    background: radial-gradient(
+      ellipse at top,
+      color-mix(in oklab, var(--neon) 8%, transparent),
+      transparent 70%
+    );
     pointer-events: none;
     z-index: 0;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
@@ -148,8 +159,14 @@
 }
 
 @keyframes blink {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 .cursor-blink::after {
   content: "_";
@@ -158,7 +175,14 @@
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
-.animate-float { animation: float-slow 6s ease-in-out infinite; }
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}

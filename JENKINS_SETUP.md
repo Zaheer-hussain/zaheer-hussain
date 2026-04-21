@@ -33,24 +33,24 @@ Install via **Manage Jenkins → Plugins**:
 - **Timestamper**
 - **Credentials Binding**
 - **Workspace Cleanup** (`cleanWs`)
-- **SonarQube Scanner** *(only if you want the Sonar stage)*
+- **SonarQube Scanner** _(only if you want the Sonar stage)_
 
 ---
 
 ## 3. Tools (Manage Jenkins → Tools)
 
 - **Bun** is **not** required as a Jenkins-managed tool — the pipeline auto-installs it into the workspace if missing. If you prefer, install Bun on the agent and the pipeline will use that copy.
-- **SonarQube Scanner** *(optional)*: add an installation named **`SonarScanner`** (this exact name is referenced in the Jenkinsfile).
+- **SonarQube Scanner** _(optional)_: add an installation named **`SonarScanner`** (this exact name is referenced in the Jenkinsfile).
 
 ---
 
 ## 4. Credentials (Manage Jenkins → Credentials → System → Global)
 
-| ID                | Type            | Used for                          |
-| ----------------- | --------------- | --------------------------------- |
-| `sonar-token`     | Secret text     | SonarQube auth (optional)         |
-| `cf-api-token`    | Secret text     | Cloudflare deploy (optional)      |
-| `cf-account-id`   | Secret text     | Cloudflare deploy (optional)      |
+| ID              | Type        | Used for                     |
+| --------------- | ----------- | ---------------------------- |
+| `sonar-token`   | Secret text | SonarQube auth (optional)    |
+| `cf-api-token`  | Secret text | Cloudflare deploy (optional) |
+| `cf-account-id` | Secret text | Cloudflare deploy (optional) |
 
 If `sonar-token` is missing, the SonarQube stage is skipped automatically — the pipeline does **not** fail.
 
