@@ -10,9 +10,10 @@ pipeline {
     }
 
     environment {
-        // Bun install location (used when Bun is auto-installed below)
-        BUN_INSTALL = "${WORKSPACE}/.bun"
-        PATH        = "${WORKSPACE}/.bun/bin:${env.PATH}"
+        // Bun install location (used when Bun is auto-installed below).
+        // On Windows, Bun installs to %USERPROFILE%\.bun\bin by default.
+        BUN_INSTALL = "${env.USERPROFILE}\\.bun"
+        PATH        = "${env.USERPROFILE}\\.bun\\bin;${env.PATH}"
         CI          = 'true'
     }
 
@@ -26,12 +27,12 @@ pipeline {
 
         stage('Setup Bun') {
             steps {
-                sh '''
-                    set -e
-                    if ! command -v bun >/dev/null 2>&1; then
-                        echo "Bun not found — installing into ${BUN_INSTALL}"
-                        curl -fsSL https://bun.sh/install | bash
-                    fi
+                powershell '''
+                    $ErrorActionPreference = "Stop"
+                    if (-not (Get-Command bun -ErrorAction SilentlyContinue)) {
+                        Write-Host "Bun not found — installing via PowerShell"
+                        irm https://bun.sh/install.ps1 | iex
+                    }
                     bun --version
                 '''
             }
@@ -39,25 +40,25 @@ pipeline {
 
         stage('Install') {
             steps {
-                sh 'bun install --frozen-lockfile'
+                bat 'bun install --frozen-lockfile'
             }
         }
 
         stage('Lint') {
             steps {
-                sh 'bun run lint'
+                bat 'bun run lint'
             }
         }
 
         stage('Type-check') {
             steps {
-                sh 'bunx tsc --noEmit'
+                bat 'bunx tsc --noEmit'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'bun run build'
+                bat 'bun run build'
             }
             post {
                 success {
@@ -85,7 +86,7 @@ pipeline {
                             // and a server config named "SonarQube" in Jenkins.
                             def scannerHome = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                             withSonarQubeEnv('SonarQube') {
-                                sh "${scannerHome}/bin/sonar-scanner -Dsonar.token=${SONAR_TOKEN}"
+                                bat "\"${scannerHome}\\bin\\sonar-scanner.bat\" -Dsonar.token=%SONAR_TOKEN%"
                             }
                         }
                     } catch (err) {
@@ -122,7 +123,7 @@ pipeline {
                 //     string(credentialsId: 'cf-api-token',  variable: 'CLOUDFLARE_API_TOKEN'),
                 //     string(credentialsId: 'cf-account-id', variable: 'CLOUDFLARE_ACCOUNT_ID')
                 // ]) {
-                //     sh 'bunx wrangler deploy'
+                //     bat 'bunx wrangler deploy'
                 // }
             }
         }
