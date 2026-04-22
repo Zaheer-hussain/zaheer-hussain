@@ -108,7 +108,7 @@ pipeline {
         }
 
         stage('Approve Deploy') {
-            when { branch 'main' }
+            when { expression { true } }
             steps {
                 input message: 'Deploy to production?', ok: 'Deploy'
             }
