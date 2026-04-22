@@ -113,20 +113,12 @@ pipeline {
                 input message: 'Deploy to production?', ok: 'Deploy'
             }
         }
-
         stage('Deploy') {
-            when { branch 'main' }
             steps {
-                echo 'Deploy step — wire up your hosting provider here (Cloudflare, Vercel, etc.)'
-                // Example for Cloudflare Workers:
-                // withCredentials([
-                //     string(credentialsId: 'cf-api-token',  variable: 'CLOUDFLARE_API_TOKEN'),
-                //     string(credentialsId: 'cf-account-id', variable: 'CLOUDFLARE_ACCOUNT_ID')
-                // ]) {
-                //     bat 'bunx wrangler deploy'
-                // }
-            }
+                echo 'Deploying...'
         }
+     }
+       
     }
 
     post {
