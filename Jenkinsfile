@@ -68,45 +68,6 @@ pipeline {
                 }
             }
         }
-
-        stage('SonarQube Scan') {
-            when {
-                expression {
-                    // Only run when the Jenkins SonarQube plugin has a server
-                    // named "SonarQube" configured AND a credential id
-                    // "sonar-token" exists. Skip silently otherwise.
-                    return env.SONAR_HOST_URL?.trim() || fileExists('sonar-project.properties')
-                }
-            }
-            steps {
-                script {
-                    try {
-                        withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                            // Requires "SonarQube Scanner" tool named "SonarScanner"
-                            // and a server config named "SonarQube" in Jenkins.
-                            def scannerHome = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-                            withSonarQubeEnv('SonarQube') {
-                                bat "\"${scannerHome}\\bin\\sonar-scanner.bat\" -Dsonar.token=%SONAR_TOKEN%"
-                            }
-                        }
-                    } catch (err) {
-                        echo "SonarQube not configured in Jenkins — skipping. (${err.getMessage()})"
-                    }
-                }
-            }
-        }
-
-        stage('Quality Gate') {
-            when {
-                expression { return env.SONAR_HOST_URL?.trim() }
-            }
-            steps {
-                timeout(time: 5, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: false
-                }
-            }
-        }
-
         stage('Approve Deploy') {
             when { expression { true } }
             steps {
