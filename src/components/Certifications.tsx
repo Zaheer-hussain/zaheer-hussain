@@ -32,7 +32,10 @@ export function Certifications() {
             </h3>
             <ul className="space-y-4">
               {certifications.map((c) => (
-                <li key={c} className="flex gap-3 text-sm text-muted-foreground leading-relaxed">
+                <li
+                  key={c}
+                  className="flex gap-3 text-sm text-muted-foreground leading-relaxed"
+                >
                   <span className="text-neon mt-1 text-[10px]">▸</span>
                   {c}
                 </li>
@@ -52,7 +55,10 @@ export function Certifications() {
             </h3>
             <ul className="space-y-4">
               {achievements.map((a) => (
-                <li key={a} className="flex gap-3 text-sm text-muted-foreground leading-relaxed">
+                <li
+                  key={a}
+                  className="flex gap-3 text-sm text-muted-foreground leading-relaxed"
+                >
                   <span className="text-neon mt-1 text-[10px]">▸</span>
                   {a}
                 </li>

@@ -3,7 +3,10 @@ import { ParticleField } from "./ParticleField";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="top"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       <div className="absolute inset-0 z-0">
         <ParticleField />
       </div>
@@ -38,10 +41,15 @@ export function Hero() {
           className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
         >
           DevOps-focused CS undergrad building and deploying{" "}
-          <span className="text-neon font-mono text-sm">AI-powered full-stack apps</span>,{" "}
-          <span className="text-neon font-mono text-sm">CI/CD pipelines</span>, and{" "}
-          <span className="text-neon font-mono text-sm">cybersecurity tooling</span> — from dev to
-          cloud with React.js, Node.js, Docker, and Jenkins.
+          <span className="text-neon font-mono text-sm">
+            AI-powered full-stack apps
+          </span>
+          , <span className="text-neon font-mono text-sm">CI/CD pipelines</span>
+          , and{" "}
+          <span className="text-neon font-mono text-sm">
+            cybersecurity tooling
+          </span>{" "}
+          — from dev to cloud with React.js, Node.js, Docker, and Jenkins.
         </motion.p>
 
         <motion.div

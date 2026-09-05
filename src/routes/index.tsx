@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Interactive 3D portfolio of Zaheer Hussain, B.Tech Computer Science student building at the intersection of DevOps, AI/ML, and Cybersecurity.",
+          "Interactive 3D portfolio of Zaheer Hussain, DevOps-focused B.Tech Computer Science student building AI-powered full-stack apps, CI/CD pipelines, and cybersecurity tooling.",
       },
       { property: "og:title", content: "Zaheer Hussain — Portfolio" },
       {

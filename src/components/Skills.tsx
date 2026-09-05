@@ -12,7 +12,15 @@ const skillGroups = [
   },
   {
     label: "devops & cloud",
-    items: ["Docker", "Jenkins", "CI/CD Pipelines", "Git & GitHub", "Oracle Cloud", "Render", "Vercel"],
+    items: [
+      "Docker",
+      "Jenkins",
+      "CI/CD Pipelines",
+      "Git & GitHub",
+      "Oracle Cloud",
+      "Render",
+      "Vercel",
+    ],
   },
   {
     label: "ai/ml & security",

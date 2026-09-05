@@ -16,21 +16,26 @@ export function About() {
           >
             <p>
               I'm a DevOps-focused B.Tech Computer Science student at{" "}
-              <span className="text-foreground">Presidency University</span>, currently holding a
-              CGPA of <span className="text-neon font-mono">8.50/10</span>. I have hands-on
-              experience building and deploying AI-powered full-stack applications, streamlined
-              CI/CD pipelines, and cybersecurity tooling.
+              <span className="text-foreground">Presidency University</span>,
+              currently holding a CGPA of{" "}
+              <span className="text-neon font-mono">8.50/10</span>. I have
+              hands-on experience building and deploying AI-powered full-stack
+              applications, streamlined CI/CD pipelines, and cybersecurity
+              tooling.
             </p>
             <p>
-              I'm comfortable taking projects from development through cloud deployment using{" "}
-              <span className="text-foreground">React.js, Node.js, Docker, Jenkins, and AI APIs</span>{" "}
-              — with relevant coursework in Cloud Computing, DevSecOps, Data Structures, and
-              Competitive Programming.
+              I'm comfortable taking projects from development through cloud
+              deployment using{" "}
+              <span className="text-foreground">
+                React.js, Node.js, Docker, Jenkins, and AI APIs
+              </span>{" "}
+              — with relevant coursework in Cloud Computing, DevSecOps, Data
+              Structures, and Competitive Programming.
             </p>
             <p>
-              I've independently built and deployed 5+ full-stack projects spanning AI, DevOps,
-              analytics, and cybersecurity — and I'm open to DevOps, Software Engineering, and
-              Full-Stack Development roles.
+              I've independently built and deployed 5+ full-stack projects
+              spanning AI, DevOps, analytics, and cybersecurity — and I'm open
+              to DevOps, Software Engineering, and Full-Stack Development roles.
             </p>
           </motion.div>
 
@@ -50,7 +55,8 @@ export function About() {
                 <span className="text-neon">{">"}</span> location: Bangalore, IN
               </div>
               <div>
-                <span className="text-neon">{">"}</span> degree: B.Tech CSE (DevOps)
+                <span className="text-neon">{">"}</span> degree: B.Tech CSE
+                (DevOps)
               </div>
               <div>
                 <span className="text-neon">{">"}</span> graduation: May 2027
@@ -62,7 +68,8 @@ export function About() {
                 <span className="text-neon">{">"}</span> github: Zaheer-hussain
               </div>
               <div>
-                <span className="text-neon">{">"}</span> focus: DevOps × AI × Security
+                <span className="text-neon">{">"}</span> focus: DevOps × AI ×
+                Security
               </div>
             </div>
           </motion.div>

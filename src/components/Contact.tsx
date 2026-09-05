@@ -21,7 +21,8 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="font-display text-4xl md:text-6xl font-bold mb-6 tracking-tighter"
         >
-          Let's <span className="text-gradient text-glow">build</span> something.
+          Let's <span className="text-gradient text-glow">build</span>{" "}
+          something.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -30,8 +31,8 @@ export function Contact() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-muted-foreground max-w-xl mx-auto mb-10"
         >
-          I'm actively looking for internships and collaborations in DevOps, full-stack, and
-          security-focused engineering. My inbox is open.
+          I'm actively looking for internships and collaborations in DevOps,
+          full-stack, and security-focused engineering. My inbox is open.
         </motion.p>
 
         <motion.div
@@ -74,8 +75,9 @@ export function Contact() {
           className="mt-20 pt-8 border-t border-border font-mono text-xs text-muted-foreground"
         >
           <p>
-            <span className="text-neon">©</span> 2026 Zaheer Hussain — crafted with React, Three.js
-            & a lot of <span className="text-neon">{"<3"}</span>
+            <span className="text-neon">©</span> 2026 Zaheer Hussain — crafted
+            with React, Three.js & a lot of{" "}
+            <span className="text-neon">{"<3"}</span>
           </p>
         </motion.div>
       </div>

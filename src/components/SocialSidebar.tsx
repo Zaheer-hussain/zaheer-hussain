@@ -19,10 +19,16 @@ export function SocialSidebar() {
           <li key={l.label}>
             <a
               href={l.href}
-              target={l.href.startsWith("http") || l.href.endsWith(".pdf") ? "_blank" : undefined}
+              target={
+                l.href.startsWith("http") || l.href.endsWith(".pdf")
+                  ? "_blank"
+                  : undefined
+              }
               rel="noopener noreferrer"
               aria-label={l.label}
-              download={l.label === "Resume" ? "Zaheer_Hussain_Resume.pdf" : undefined}
+              download={
+                l.label === "Resume" ? "Zaheer_Hussain_Resume.pdf" : undefined
+              }
               className="block text-muted-foreground hover:text-neon hover:-translate-y-1 transition-all duration-200"
             >
               <l.icon className="w-5 h-5" />
