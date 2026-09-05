@@ -45,7 +45,9 @@ export function ContactForm() {
       onSubmit={onSubmit}
       className="mt-12 max-w-xl mx-auto text-left space-y-4 rounded-sm border border-border bg-card/40 backdrop-blur-sm p-6"
     >
-      <div className="font-mono text-xs text-neon mb-2">$ ./compose --message</div>
+      <div className="font-mono text-xs text-neon mb-2">
+        $ ./compose --message
+      </div>
 
       <div>
         <label className="font-mono text-xs text-muted-foreground">name</label>
@@ -72,7 +74,9 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label className="font-mono text-xs text-muted-foreground">message</label>
+        <label className="font-mono text-xs text-muted-foreground">
+          message
+        </label>
         <textarea
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}

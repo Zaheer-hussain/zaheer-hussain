@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
+import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { SocialSidebar } from "@/components/SocialSidebar";
 import { Toaster } from "@/components/ui/sonner";
@@ -19,6 +20,7 @@ function IndexPage() {
       <Skills />
       <Projects />
       <Experience />
+      <Certifications />
       <Contact />
       <Toaster theme="dark" position="bottom-right" />
     </main>
@@ -33,7 +35,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Interactive 3D portfolio of Zaheer Hussain, B.Tech Computer Science student building at the intersection of DevOps, AI/ML, and Cybersecurity.",
+          "Interactive 3D portfolio of Zaheer Hussain, DevOps-focused B.Tech Computer Science student building AI-powered full-stack apps, CI/CD pipelines, and cybersecurity tooling.",
       },
       { property: "og:title", content: "Zaheer Hussain — Portfolio" },
       {

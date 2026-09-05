@@ -25,7 +25,8 @@ function Particles({ count = 2500 }: { count?: number }) {
     ref.current.rotation.y += delta * 0.05;
     ref.current.rotation.x += delta * 0.02;
 
-    const positionAttr = ref.current.geometry.attributes.position as THREE.BufferAttribute;
+    const positionAttr = ref.current.geometry.attributes
+      .position as THREE.BufferAttribute;
     const arr = positionAttr.array as Float32Array;
     const mx = (state.pointer.x * viewport.width) / 2;
     const my = (state.pointer.y * viewport.height) / 2;
