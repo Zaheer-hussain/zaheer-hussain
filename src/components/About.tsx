@@ -15,20 +15,22 @@ export function About() {
             className="md:col-span-2 space-y-5 text-muted-foreground leading-relaxed"
           >
             <p>
-              I'm a third-year B.Tech Computer Science student at{" "}
+              I'm a DevOps-focused B.Tech Computer Science student at{" "}
               <span className="text-foreground">Presidency University</span>, currently holding a
-              CGPA of <span className="text-neon font-mono">8.52/10</span>. My focus lies in DevOps,
-              with a deep curiosity for how AI/ML and Cybersecurity converge to shape the next
-              generation of intelligent systems.
+              CGPA of <span className="text-neon font-mono">8.50/10</span>. I have hands-on
+              experience building and deploying AI-powered full-stack applications, streamlined
+              CI/CD pipelines, and cybersecurity tooling.
             </p>
             <p>
-              I build full-stack web applications, tinker with embedded hardware, and spend a lot of
-              time thinking about the boundary between code that ships and code that's secure,
-              observable, and scalable.
+              I'm comfortable taking projects from development through cloud deployment using{" "}
+              <span className="text-foreground">React.js, Node.js, Docker, Jenkins, and AI APIs</span>{" "}
+              — with relevant coursework in Cloud Computing, DevSecOps, Data Structures, and
+              Competitive Programming.
             </p>
             <p>
-              When I'm not coding, you'll find me exploring new tech, contributing to team projects,
-              and constantly learning at the bleeding edge.
+              I've independently built and deployed 5+ full-stack projects spanning AI, DevOps,
+              analytics, and cybersecurity — and I'm open to DevOps, Software Engineering, and
+              Full-Stack Development roles.
             </p>
           </motion.div>
 
@@ -54,10 +56,13 @@ export function About() {
                 <span className="text-neon">{">"}</span> graduation: May 2027
               </div>
               <div>
-                <span className="text-neon">{">"}</span> cgpa: 8.52/10
+                <span className="text-neon">{">"}</span> cgpa: 8.50/10
               </div>
               <div>
-                <span className="text-neon">{">"}</span> focus: AI/ML × CyberSec
+                <span className="text-neon">{">"}</span> github: Zaheer-hussain
+              </div>
+              <div>
+                <span className="text-neon">{">"}</span> focus: DevOps × AI × Security
               </div>
             </div>
           </motion.div>
