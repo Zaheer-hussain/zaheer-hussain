@@ -8,8 +8,9 @@ const items = [
     date: "Jun 2025 – Jul 2025",
     location: "Remote",
     points: [
-      "Contributed to web application development as part of a collaborative team.",
-      "Worked with Git for version control on shared codebases.",
+      "Built responsive web application components, streamlining frontend integration workflows across the codebase.",
+      "Collaborated with the development team using Git and GitHub, managing feature branches and merges in a team-based workflow.",
+      "Strengthened debugging, REST API integration, and deployment skills through hands-on feature delivery.",
     ],
   },
   {
@@ -18,17 +19,33 @@ const items = [
     date: "Aug 2024 – Sep 2024",
     location: "Remote",
     points: [
-      "Completed an online learning internship focused on Java programming.",
-      "Built classic games like Tic-Tac-Toe and Connect 4 to strengthen Java fundamentals.",
-      "Sharpened problem-solving and OOP design skills.",
+      "Created Java-based applications including Tic-Tac-Toe and Connect 4, applying Object-Oriented Programming concepts.",
+      "Strengthened core problem-solving and software development fundamentals through applied coding exercises and peer code reviews.",
     ],
   },
   {
-    role: "B.Tech in Computer Science (DevOps)",
+    role: "B.Tech in Computer Science & Technology (DevOps)",
     org: "Presidency University",
     date: "2023 – 2027 (expected)",
     location: "Bangalore, India",
-    points: ["CGPA: 8.52/10.00"],
+    points: [
+      "CGPA: 8.50/10.00",
+      "Coursework: Cloud Computing, DevSecOps, Data Structures, Competitive Programming.",
+    ],
+  },
+  {
+    role: "Pre-University Certificate (12th Grade)",
+    org: "Reva PU College",
+    date: "Completed",
+    location: "Karnataka, India",
+    points: ["Scored 87%"],
+  },
+  {
+    role: "Matriculation (10th Grade)",
+    org: "St. Michael's High School",
+    date: "Completed",
+    location: "Karnataka, India",
+    points: ["Scored 84%"],
   },
 ];
 
@@ -45,7 +62,7 @@ export function Experience() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
               className="relative pb-12 last:pb-0"
             >
               <div className="absolute -left-[34px] md:-left-[50px] top-1 w-4 h-4 rounded-full bg-background border-2 border-neon shadow-glow" />

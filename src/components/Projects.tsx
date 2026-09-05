@@ -1,23 +1,50 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const projects = [
   {
     num: "01",
-    title: "Excel Analytics Platform",
+    title: "AI DevOps Log Analyzer",
     blurb:
-      "Full-stack web application that lets users upload Excel data and generate interactive, real-time charts for visualization.",
-    stack: ["React", "Node.js", "Express", "MongoDB Atlas"],
-    accent: "data viz",
+      "AI-powered DevOps monitoring platform that analyzes Jenkins, Docker, and Kubernetes logs for issue detection, with Gemini-driven anomaly analysis and security risk assessment. Deployed across Render and Vercel with a production-ready CI workflow.",
+    stack: ["React.js", "Node.js", "Express", "Gemini AI", "Docker", "Render", "Vercel"],
+    accent: "ai devops",
   },
   {
     num: "02",
-    title: "Arduino Bluetooth Control Car",
+    title: "AI Cyber Threat Detection Dashboard",
     blurb:
-      "Remote-controlled vehicle built on Arduino Uno + HC-05 Bluetooth module. Wireless smartphone control with functional front/back LED safety signaling.",
-    stack: ["Embedded C/C++", "Arduino IDE", "Bluetooth"],
-    accent: "embedded",
+      "Cybersecurity dashboard detecting phishing URLs, malicious activity, and threat indicators — with AI-driven threat scoring, severity analysis, and AI-generated mitigation recommendations.",
+    stack: ["React.js", "Node.js", "Express", "Gemini AI API", "Tailwind CSS"],
+    accent: "security",
+  },
+  {
+    num: "03",
+    title: "Smart Bike Safety Light System",
+    blurb:
+      "Real-time vehicle detection running YOLOv5 on a Raspberry Pi with live IP camera integration. Glare reduction, CLAHE enhancement, multithreading, and frame skipping optimize inference on constrained hardware, driving red/green safety indicators.",
+    stack: ["YOLOv5", "Raspberry Pi", "Python", "OpenCV"],
+    accent: "computer vision",
+  },
+  {
+    num: "04",
+    title: "DevOps CI/CD Pipeline Project",
+    blurb:
+      "Automated CI/CD pipeline built with Jenkins and Docker, integrated with GitHub for source control. Build, test, and deployment stages streamlined via pipeline-as-code, cutting manual release steps.",
+    stack: ["Jenkins", "Docker", "GitHub", "Jenkinsfile"],
+    accent: "automation",
+  },
+  {
+    num: "05",
+    title: "Excel Analytics Platform",
+    blurb:
+      "Full-stack analytics platform for Excel dataset uploads and interactive data visualization, with REST APIs powering real-time chart generation and analytics processing.",
+    stack: ["React.js", "Node.js", "Express", "REST APIs"],
+    accent: "data viz",
+    demo: "https://excel-analytics-frontend-x0l8.onrender.com/",
+    repo: "https://github.com/Zaheer-hussain/Excel-Analytics-Platform.git",
   },
 ];
 
@@ -41,7 +68,7 @@ function TiltCard({ children }: { children: React.ReactNode }) {
       ref={ref}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
-      className="transition-transform duration-200 will-change-transform"
+      className="h-full transition-transform duration-200 will-change-transform"
     >
       {children}
     </div>
@@ -60,7 +87,7 @@ export function Projects() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
+              transition={{ duration: 0.6, delay: (i % 2) * 0.15 }}
             >
               <TiltCard>
                 <article className="group relative h-full rounded-sm border border-border bg-card/60 backdrop-blur-sm p-8 hover:border-neon/60 hover:shadow-glow transition-all duration-300 overflow-hidden">
@@ -85,6 +112,30 @@ export function Projects() {
                       </li>
                     ))}
                   </ul>
+                  {(p.demo || p.repo) && (
+                    <div className="mt-6 flex flex-wrap gap-4 font-mono text-xs">
+                      {p.demo && (
+                        <a
+                          href={p.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-neon hover:underline"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" /> live_demo
+                        </a>
+                      )}
+                      {p.repo && (
+                        <a
+                          href={p.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-neon transition-colors"
+                        >
+                          <Github className="w-3.5 h-3.5" /> source
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </article>
               </TiltCard>
             </motion.div>
