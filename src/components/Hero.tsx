@@ -37,11 +37,11 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
         >
-          CS undergrad building at the intersection of{" "}
-          <span className="text-neon font-mono text-sm">DevOps</span>,{" "}
-          <span className="text-neon font-mono text-sm">AI/ML</span>, and{" "}
-          <span className="text-neon font-mono text-sm">Cybersecurity</span>. Crafting secure,
-          intelligent, scalable systems.
+          DevOps-focused CS undergrad building and deploying{" "}
+          <span className="text-neon font-mono text-sm">AI-powered full-stack apps</span>,{" "}
+          <span className="text-neon font-mono text-sm">CI/CD pipelines</span>, and{" "}
+          <span className="text-neon font-mono text-sm">cybersecurity tooling</span> — from dev to
+          cloud with React.js, Node.js, Docker, and Jenkins.
         </motion.p>
 
         <motion.div

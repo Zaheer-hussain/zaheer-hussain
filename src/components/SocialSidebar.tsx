@@ -6,7 +6,7 @@ const links = [
     icon: Linkedin,
     label: "LinkedIn",
   },
-  { href: "https://github.com/", icon: Github, label: "GitHub" },
+  { href: "https://github.com/Zaheer-hussain", icon: Github, label: "GitHub" },
   { href: "mailto:zaheerhussain9620@gmail.com", icon: Mail, label: "Email" },
   { href: "/Zaheer_Hussain_Resume.pdf", icon: FileDown, label: "Resume" },
 ];

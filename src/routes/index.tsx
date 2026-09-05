@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
+import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { SocialSidebar } from "@/components/SocialSidebar";
 import { Toaster } from "@/components/ui/sonner";
@@ -19,6 +20,7 @@ function IndexPage() {
       <Skills />
       <Projects />
       <Experience />
+      <Certifications />
       <Contact />
       <Toaster theme="dark" position="bottom-right" />
     </main>
