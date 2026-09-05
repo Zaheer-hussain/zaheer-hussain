@@ -12,7 +12,7 @@ export function Contact() {
           viewport={{ once: true }}
           className="font-mono text-sm text-neon mb-4"
         >
-          05. what's next?
+          06. what's next?
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
